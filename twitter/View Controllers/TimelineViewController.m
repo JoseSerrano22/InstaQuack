@@ -13,6 +13,8 @@
 
 @interface TimelineViewController ()
 
+@property (strong,nonatomic) NSMutableArray *arrayOfTweets;
+
 @end
 
 @implementation TimelineViewController
@@ -20,23 +22,27 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Get timeline
-    [[APIManager shared] getHomeTimelineWithCompletion:^(NSArray *tweets, NSError *error) {
-        if (tweets) {
-            NSLog(@"😎😎😎 Successfully loaded home timeline");
-            for (NSDictionary *dictionary in tweets) {
-                NSString *text = dictionary[@"text"];
-                NSLog(@"%@", text);
-            }
-        } else {
-            NSLog(@"😫😫😫 Error getting home timeline: %@", error.localizedDescription);
-        }
-    }];
+    [self loadTweets];
+    
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)loadTweets {
+    // Get timeline
+    [[APIManager shared] getHomeTimelineWithCompletion:^(NSArray *tweets, NSError *error) {
+        if (tweets) {
+            self.arrayOfTweets = (NSMutableArray *) tweets;
+        }
+        else {
+            NSLog(@"😫😫😫 Error getting home timeline: %@", error.localizedDescription);
+        }
+    
+    }];
+
 }
 
 - (IBAction)didTapLogout:(id)sender {
@@ -50,7 +56,6 @@
     [[APIManager shared] logout];
 
 }
-
 
 /*
 #pragma mark - Navigation
