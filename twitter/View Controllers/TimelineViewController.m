@@ -10,9 +10,11 @@
 #import "LoginViewController.h"
 #import "APIManager.h"
 #import "AppDelegate.h"
+#import "TweetCell.h"
 
-@interface TimelineViewController ()
+@interface TimelineViewController () <UITableViewDataSource, UITableViewDelegate>
 
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
 @property (strong,nonatomic) NSMutableArray *arrayOfTweets;
 
 @end
@@ -21,6 +23,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.tableView.dataSource = self;
+    self.tableView.delegate = self;
     
     [self loadTweets];
     
@@ -43,6 +48,17 @@
     
     }];
 
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.arrayOfTweets.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    TweetCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"TweetCell"];
+    cell.tweet = self.arrayOfTweets[indexPath.row];
+    
+    return cell;
 }
 
 - (IBAction)didTapLogout:(id)sender {
