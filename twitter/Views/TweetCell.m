@@ -33,6 +33,7 @@
 //    self.timeSinceCreation.text = tweet.timeSinceCreation;
     self.retweetNumLabel.text = [NSString stringWithFormat:@"%d", tweet.retweetCount];
     self.favoriteNumLabel.text = [NSString stringWithFormat:@"%d", tweet.favoriteCount];
+    self.replyNumLabel.text = [NSString stringWithFormat:@"%d", tweet.replyCount];
     
     // getting profile picture from api and setting it in the table cell
     NSURL *profileURL = [NSURL URLWithString:tweet.user.profilePictureURL];

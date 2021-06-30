@@ -31,6 +31,8 @@ NS_ASSUME_NONNULL_BEGIN
 // MARK: Properties
 @property (strong,nonatomic) Tweet *tweet;
 
+-(void)setTweet:(Tweet*) tweet;
+
 @end
 
 NS_ASSUME_NONNULL_END
