@@ -26,9 +26,11 @@
     self.nameLabel.text = self.tweet.user.name;
     self.screenNameLabel.text = self.tweet.user.screenName;
     self.contentLabel.text = self.tweet.text;
+    self.dateLabel.text = self.tweet.createdAtString;
     
     self.favoriteNumLabel.text = [NSString stringWithFormat:@"%d", self.tweet.favoriteCount];
     self.retweetNumLabel.text = [NSString stringWithFormat:@"%d", self.tweet.retweetCount];
+    self.replyNumLabel.text = [NSString stringWithFormat:@"%d", self.tweet.replyCount];
 }
 
 // MARK: IBActions

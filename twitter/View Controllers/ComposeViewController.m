@@ -20,6 +20,8 @@
     [super viewDidLoad];
     self.textView.delegate = self;
     [self.contentCharacterCountLabel setText:[NSString stringWithFormat:@"%d", 280]];
+    self.textView.layer.borderWidth = 1.0f;
+    self.textView.layer.borderColor = [[UIColor grayColor] CGColor];
 }
 
 - (void)textViewDidChange:(UITextView *)textView {

@@ -373,7 +373,7 @@
                             <constraint firstItem="WDp-XG-mOe" firstAttribute="bottom" secondItem="piL-x5-kus" secondAttribute="bottom" id="79L-sW-Knx"/>
                             <constraint firstItem="zCy-q8-ErY" firstAttribute="top" secondItem="nPw-K0-GKW" secondAttribute="bottom" constant="8" id="FVE-XH-KsW"/>
                             <constraint firstItem="nPw-K0-GKW" firstAttribute="leading" secondItem="0hm-hB-QdK" secondAttribute="trailing" constant="8" id="Fkp-iF-LCR"/>
-                            <constraint firstItem="r6F-CU-Q6p" firstAttribute="leading" secondItem="nPw-K0-GKW" secondAttribute="trailing" constant="175" id="HoK-Ou-q6B"/>
+                            <constraint firstItem="r6F-CU-Q6p" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="nPw-K0-GKW" secondAttribute="trailing" constant="10" id="HoK-Ou-q6B"/>
                             <constraint firstItem="5zW-7O-Twe" firstAttribute="trailing" secondItem="zCy-q8-ErY" secondAttribute="trailing" constant="216" id="Kk4-Qf-mWo"/>
                             <constraint firstItem="HjB-Qr-8nX" firstAttribute="bottom" secondItem="piL-x5-kus" secondAttribute="bottom" id="MrA-ql-XQd"/>
                             <constraint firstItem="5zW-7O-Twe" firstAttribute="trailing" secondItem="mdK-hA-Xbw" secondAttribute="trailing" constant="16" id="TWt-lW-M9P"/>
@@ -430,7 +430,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" keyboardDismissMode="onDrag" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="4mN-a5-1hc">
-                                <rect key="frame" x="16" y="98" width="358" height="531"/>
+                                <rect key="frame" x="16" y="98" width="358" height="358"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="358" id="F0m-Xq-tlr"/>
@@ -454,7 +454,7 @@
                             <constraint firstItem="k4Y-A5-fKg" firstAttribute="leading" secondItem="w9C-0m-e1d" secondAttribute="leading" constant="16" id="JJI-Nc-m7V"/>
                             <constraint firstItem="tmk-Mg-BYh" firstAttribute="leading" secondItem="k4Y-A5-fKg" secondAttribute="trailing" constant="151" id="Kpq-jM-hgF"/>
                             <constraint firstItem="tmk-Mg-BYh" firstAttribute="top" secondItem="w9C-0m-e1d" secondAttribute="top" constant="12" id="NJ6-uC-nl6"/>
-                            <constraint firstItem="w9C-0m-e1d" firstAttribute="bottom" secondItem="4mN-a5-1hc" secondAttribute="bottom" constant="127" id="RTJ-jP-RB4"/>
+                            <constraint firstItem="w9C-0m-e1d" firstAttribute="bottom" secondItem="4mN-a5-1hc" secondAttribute="bottom" constant="300" id="RTJ-jP-RB4"/>
                             <constraint firstItem="k4Y-A5-fKg" firstAttribute="top" secondItem="w9C-0m-e1d" secondAttribute="top" constant="12" id="YVs-ut-1oJ"/>
                             <constraint firstItem="w9C-0m-e1d" firstAttribute="trailing" secondItem="k4Y-A5-fKg" secondAttribute="trailing" constant="199" id="dOM-sN-96D"/>
                             <constraint firstItem="w9C-0m-e1d" firstAttribute="trailing" secondItem="tmk-Mg-BYh" secondAttribute="trailing" constant="16" id="oCv-lH-aID"/>
