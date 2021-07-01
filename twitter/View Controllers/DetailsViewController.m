@@ -21,10 +21,14 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    [self.profilePictureView setImageWithURL: [self.tweet.user profilePictureURL]];
+    NSURL *profilePicURL = [NSURL URLWithString:self.tweet.user.profilePictureURL];
+    [self.profilePictureView setImageWithURL: profilePicURL];
     self.nameLabel.text = self.tweet.user.name;
     self.screenNameLabel.text = self.tweet.user.screenName;
     self.contentLabel.text = self.tweet.text;
+    
+    self.favoriteNumLabel.text = [NSString stringWithFormat:@"%d", self.tweet.favoriteCount];
+    self.retweetNumLabel.text = [NSString stringWithFormat:@"%d", self.tweet.retweetCount];
 }
 
 // MARK: IBActions

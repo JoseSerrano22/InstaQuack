@@ -89,7 +89,23 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     TweetCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"TweetCell"];
-    cell.tweet = self.arrayOfTweets[indexPath.row];
+    Tweet *tweet = self.arrayOfTweets[indexPath.row];
+//    cell.tweet = self.arrayOfTweets[indexPath.row];
+    
+    [cell updateDataTweet:tweet];
+    
+    if (cell.tweet.favorited) {
+        [cell.favoriteButton setSelected:YES];
+    } else {
+        [cell.favoriteButton setSelected:NO];
+    }
+    
+    if (cell.tweet.retweeted) {
+        [cell.retweetButton setSelected:YES];
+    } else {
+        [cell.retweetButton setSelected:NO];
+    }
+    
     return cell;
 }
 
@@ -113,7 +129,8 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
     if ([[segue identifier] isEqualToString:@"detailsSegue"]) {
-        DetailsViewController *detailsViewController = [segue destinationViewController];
+        UINavigationController *navViewController = [segue destinationViewController];
+        DetailsViewController *detailsViewController = (DetailsViewController *) navViewController.topViewController;
         UITableViewCell *tappedCell = sender;
         NSIndexPath *indexPath = [self.tableView indexPathForCell:tappedCell];
         Tweet *tweet = self.arrayOfTweets[indexPath.row];

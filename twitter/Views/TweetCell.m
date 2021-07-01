@@ -23,8 +23,8 @@
     // Configure the view for the selected state
 }
 
-- (void)setTweet:(Tweet *)tweet {
-    _tweet = tweet;
+- (void)updateDataTweet:(Tweet *)tweet {
+    self.tweet = tweet;
     
     self.nameLabel.text = tweet.user.name;
     self.screenNameLabel.text = [NSString stringWithFormat:@"@%@",tweet.user.screenName];
