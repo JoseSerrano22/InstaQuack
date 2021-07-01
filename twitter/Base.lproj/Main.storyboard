@@ -123,6 +123,9 @@
                                                         <constraint firstAttribute="height" constant="19" id="w9p-Ic-XQe"/>
                                                     </constraints>
                                                     <state key="normal" title="Button" image="retweet-icon"/>
+                                                    <connections>
+                                                        <action selector="didTapRetweet:" destination="hzG-iO-o7z" eventType="touchUpInside" id="i9W-jJ-LIF"/>
+                                                    </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hYb-6x-FUr">
                                                     <rect key="frame" x="202.66666666666666" y="119.66666666666669" width="7.6666666666666572" height="17"/>
@@ -137,6 +140,9 @@
                                                         <constraint firstAttribute="height" constant="19" id="lZP-HF-512"/>
                                                     </constraints>
                                                     <state key="normal" title="Button" image="favor-icon"/>
+                                                    <connections>
+                                                        <action selector="didTapFavorite:" destination="hzG-iO-o7z" eventType="touchUpInside" id="0cE-RO-Vpz"/>
+                                                    </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="F" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YNM-KT-wup">
                                                     <rect key="frame" x="279.33333333333331" y="119.66666666666669" width="6.6666666666666856" height="17"/>
