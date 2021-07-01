@@ -23,8 +23,11 @@
     
     NSURL *profilePicURL = [NSURL URLWithString:self.tweet.user.profilePictureURL];
     [self.profilePictureView setImageWithURL: profilePicURL];
+    self.profilePictureView.layer.cornerRadius = 25;
+    self.profilePictureView.layer.masksToBounds = YES;
+    
     self.nameLabel.text = self.tweet.user.name;
-    self.screenNameLabel.text = self.tweet.user.screenName;
+    self.screenNameLabel.text = [NSString stringWithFormat:@"@%@",self.tweet.user.screenName];
     self.contentLabel.text = self.tweet.text;
     self.dateLabel.text = self.tweet.createdAtString;
     

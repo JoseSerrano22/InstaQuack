@@ -40,6 +40,8 @@
     NSURL *profileURL = [NSURL URLWithString:tweet.user.profilePictureURL];
     self.profilePictureView.image = nil;
     [self.profilePictureView setImageWithURL:profileURL];
+    self.profilePictureView.layer.cornerRadius = 25;
+    self.profilePictureView.layer.masksToBounds = YES;
     
     // Update UI based on if tweet if favorited or retweeted
     if (self.tweet.favorited) {
