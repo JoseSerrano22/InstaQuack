@@ -296,9 +296,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" enablesReturnKeyAutomatically="YES"/>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="280 characters" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tmk-Mg-BYh">
-                                <rect key="frame" x="253" y="67" width="121" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="280" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tmk-Mg-BYh">
+                                <rect key="frame" x="342" y="68" width="32" height="22"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -311,9 +310,12 @@
                             <constraint firstItem="4mN-a5-1hc" firstAttribute="leading" secondItem="w9C-0m-e1d" secondAttribute="leading" constant="16" id="E3E-EU-Ydi"/>
                             <constraint firstItem="4mN-a5-1hc" firstAttribute="top" secondItem="k4Y-A5-fKg" secondAttribute="bottom" constant="8" id="IXu-Rs-rpu"/>
                             <constraint firstItem="k4Y-A5-fKg" firstAttribute="leading" secondItem="w9C-0m-e1d" secondAttribute="leading" constant="16" id="JJI-Nc-m7V"/>
+                            <constraint firstItem="tmk-Mg-BYh" firstAttribute="leading" secondItem="k4Y-A5-fKg" secondAttribute="trailing" constant="151" id="Kpq-jM-hgF"/>
+                            <constraint firstItem="tmk-Mg-BYh" firstAttribute="top" secondItem="w9C-0m-e1d" secondAttribute="top" constant="12" id="NJ6-uC-nl6"/>
                             <constraint firstItem="w9C-0m-e1d" firstAttribute="bottom" secondItem="4mN-a5-1hc" secondAttribute="bottom" constant="127" id="RTJ-jP-RB4"/>
                             <constraint firstItem="k4Y-A5-fKg" firstAttribute="top" secondItem="w9C-0m-e1d" secondAttribute="top" constant="12" id="YVs-ut-1oJ"/>
                             <constraint firstItem="w9C-0m-e1d" firstAttribute="trailing" secondItem="k4Y-A5-fKg" secondAttribute="trailing" constant="199" id="dOM-sN-96D"/>
+                            <constraint firstItem="w9C-0m-e1d" firstAttribute="trailing" secondItem="tmk-Mg-BYh" secondAttribute="trailing" constant="16" id="oCv-lH-aID"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="MWT-Lm-aVl">
