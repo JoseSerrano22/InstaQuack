@@ -219,10 +219,10 @@
                                 <rect key="frame" x="16" y="13" width="86" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Log out"/>
+                                <connections>
+                                    <action selector="didTapLogout:" destination="Lbl-k5-U4i" eventType="touchUpInside" id="xkA-4d-dQ0"/>
+                                </connections>
                             </button>
-                            <connections>
-                                <action selector="didTapLogout:" destination="Lbl-k5-U4i" id="gnn-7I-Shq"/>
-                            </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="plain" id="xKG-Jv-Xl4">
                             <button key="customView" opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="mh8-b8-B9Z">
