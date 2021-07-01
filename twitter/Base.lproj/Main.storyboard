@@ -282,31 +282,38 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What is on your mind?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k4Y-A5-fKg">
-                                <rect key="frame" x="23" y="66" width="175" height="22"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="175" id="61M-Ns-Lrm"/>
-                                    <constraint firstAttribute="height" constant="22" id="lSu-QG-6Gj"/>
-                                </constraints>
+                                <rect key="frame" x="16" y="68" width="175" height="22"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" keyboardDismissMode="onDrag" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="4mN-a5-1hc">
-                                <rect key="frame" x="23" y="108" width="344" height="574"/>
+                                <rect key="frame" x="16" y="98" width="358" height="531"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="358" id="F0m-Xq-tlr"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" enablesReturnKeyAutomatically="YES"/>
                             </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="280 characters" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tmk-Mg-BYh">
+                                <rect key="frame" x="253" y="67" width="121" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="w9C-0m-e1d"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="4mN-a5-1hc" firstAttribute="leading" secondItem="k4Y-A5-fKg" secondAttribute="leading" id="ScS-fg-m4g"/>
-                            <constraint firstItem="k4Y-A5-fKg" firstAttribute="leading" secondItem="w9C-0m-e1d" secondAttribute="leading" constant="23" id="e8O-8h-TZJ"/>
-                            <constraint firstItem="4mN-a5-1hc" firstAttribute="centerX" secondItem="d3P-NK-7Ia" secondAttribute="centerX" id="ndd-Kd-4jH"/>
-                            <constraint firstItem="k4Y-A5-fKg" firstAttribute="top" secondItem="w9C-0m-e1d" secondAttribute="top" constant="10" id="ukN-Gf-3Zv"/>
-                            <constraint firstItem="4mN-a5-1hc" firstAttribute="top" secondItem="k4Y-A5-fKg" secondAttribute="bottom" constant="20" id="yEW-t0-oms"/>
-                            <constraint firstItem="4mN-a5-1hc" firstAttribute="centerY" secondItem="d3P-NK-7Ia" secondAttribute="centerY" id="zo8-Qb-Ade"/>
+                            <constraint firstItem="w9C-0m-e1d" firstAttribute="trailing" secondItem="4mN-a5-1hc" secondAttribute="trailing" constant="16" id="CQ1-yB-yhg"/>
+                            <constraint firstItem="4mN-a5-1hc" firstAttribute="leading" secondItem="w9C-0m-e1d" secondAttribute="leading" constant="16" id="E3E-EU-Ydi"/>
+                            <constraint firstItem="4mN-a5-1hc" firstAttribute="top" secondItem="k4Y-A5-fKg" secondAttribute="bottom" constant="8" id="IXu-Rs-rpu"/>
+                            <constraint firstItem="k4Y-A5-fKg" firstAttribute="leading" secondItem="w9C-0m-e1d" secondAttribute="leading" constant="16" id="JJI-Nc-m7V"/>
+                            <constraint firstItem="w9C-0m-e1d" firstAttribute="bottom" secondItem="4mN-a5-1hc" secondAttribute="bottom" constant="127" id="RTJ-jP-RB4"/>
+                            <constraint firstItem="k4Y-A5-fKg" firstAttribute="top" secondItem="w9C-0m-e1d" secondAttribute="top" constant="12" id="YVs-ut-1oJ"/>
+                            <constraint firstItem="w9C-0m-e1d" firstAttribute="trailing" secondItem="k4Y-A5-fKg" secondAttribute="trailing" constant="199" id="dOM-sN-96D"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="MWT-Lm-aVl">
@@ -332,6 +339,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="contentCharacterCountLabel" destination="tmk-Mg-BYh" id="JFz-zr-f5m"/>
                         <outlet property="textView" destination="4mN-a5-1hc" id="rTf-0f-d63"/>
                     </connections>
                 </viewController>

@@ -11,13 +11,28 @@
 
 @interface ComposeViewController ()
 @property (weak, nonatomic) IBOutlet UITextView *textView;
+@property (weak, nonatomic) IBOutlet UILabel *contentCharacterCountLabel;
 @end
 
 @implementation ComposeViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.textView.delegate = self;
+    [self.contentCharacterCountLabel setText:[NSString stringWithFormat:@"%d", 280]];
+}
+
+- (void)textViewDidChange:(UITextView *)textView {
+    // Length of tweet can't exceed 280 characters
+    NSInteger restrictedLength = 280;
+    NSInteger lengthLeft = 280 - [[self.textView text] length];
+    [self.contentCharacterCountLabel setText:[NSString stringWithFormat:@"%ld", (long)lengthLeft]];
+    
+    if([[self.textView text] length] > restrictedLength){
+        self.contentCharacterCountLabel.textColor = UIColor.redColor;
+    } else {
+        self.contentCharacterCountLabel.textColor = UIColor.blackColor;
+    }
 }
 
 - (IBAction)closeButton:(id)sender {
