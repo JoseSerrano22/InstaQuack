@@ -211,6 +211,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="contentLabel" destination="T5i-TP-jgb" id="dlA-Zl-vC2"/>
+                                            <outlet property="dateLabel" destination="GOS-We-CXt" id="dYf-vA-22f"/>
                                             <outlet property="favoriteButton" destination="E3H-Zi-TNW" id="yNV-Hv-OOA"/>
                                             <outlet property="favoriteNumLabel" destination="YNM-KT-wup" id="KHz-vl-AQd"/>
                                             <outlet property="nameLabel" destination="StY-46-Dyh" id="1MZ-f5-AIB"/>

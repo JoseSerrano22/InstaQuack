@@ -29,6 +29,7 @@
     self.nameLabel.text = tweet.user.name;
     self.screenNameLabel.text = [NSString stringWithFormat:@"@%@",tweet.user.screenName];
     self.contentLabel.text = tweet.text;
+    self.dateLabel.text = tweet.createdAtString;
     
     //    self.timeSinceCreation.text = tweet.timeSinceCreation;
     self.retweetNumLabel.text = [NSString stringWithFormat:@"%d", tweet.retweetCount];
