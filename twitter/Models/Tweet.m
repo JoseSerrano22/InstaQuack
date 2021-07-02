@@ -48,7 +48,7 @@
          NSDate *date = [formatter dateFromString:createdAtOriginalString];
          
          // Pod that creates timeAgo
-         NSString *ago = [date timeAgoSinceNow];
+         NSString *ago = [date shortTimeAgoSinceNow];
          
          // Convert Date to String
          self.createdAtString = ago;
