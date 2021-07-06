@@ -54,7 +54,18 @@ Please list two areas of the assignment you'd like to **discuss further with you
 Here's a walkthrough of implemented user stories:
 
 <img src='InstaQuackWalkthrough.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
-<img src='iphone 12.mov' title='Video orientation 12' width='' alt='Video orientation 12' />
+
+Video orientation 12
+
+<img src='iphone12.gif' title='Video orientation 12' width='' alt='Video orientation 12' />
+
+Video orientation 8 plus
+
+<img src='iphone8.gif' title='Video orientation 8 plus' width='' alt='Video orientation 8 plus' />
+
+Video orientation SE
+
+<img src='iphoneSE.gif' title='Video orientation SE' width='' alt='Video orientation SE' />
 
 ## Notes
 
